@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Banca">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0073EA"
+        android:paddingStart="20dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/Hola"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="¡Hola, Osvaldo\nEsquivel!"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Ojo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/Ojo"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Ojo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Notificacion"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ojo" />
+
+        <ImageView
+            android:id="@+id/Notificacion"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="Notificaciones"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_bell" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardCuenta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardBackgroundColor="#519BF1"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/BanCoppel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BanCoppel"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Clic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CUENTA BANCOPPEL CLIC"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/BanCoppel" />
+
+            <TextView
+                android:id="@+id/Saldo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Saldo actual"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Clic" />
+
+            <TextView
+                android:id="@+id/SaldoMX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="$0"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Saldo" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMasDatos"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:paddingStart="12dp"
+                android:paddingTop="0dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="0dp"
+                android:text="Mas datos"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                app:cornerRadius="18dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:strokeColor="#FFFFFF"
+                app:strokeWidth="1.5dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/btnTransferir"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnPagar"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardCuenta"
+        app:srcCompat="@drawable/transferencia" />
+
+    <TextView
+        android:id="@+id/Transferir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Transferir"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnTransferir"
+        app:layout_constraintStart_toStartOf="@+id/btnTransferir"
+        app:layout_constraintTop_toBottomOf="@+id/btnTransferir" />
+
+    <ImageView
+        android:id="@+id/btnPagar"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnRetirar"
+        app:layout_constraintStart_toEndOf="@+id/btnTransferir"
+        app:layout_constraintTop_toBottomOf="@+id/cardCuenta"
+        app:srcCompat="@drawable/pagar" />
+
+    <TextView
+        android:id="@+id/Pagar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Pagar"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnPagar"
+        app:layout_constraintStart_toStartOf="@+id/btnPagar"
+        app:layout_constraintTop_toBottomOf="@+id/btnPagar" />
+
+    <ImageView
+        android:id="@+id/btnRetirar"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnMasAcciones"
+        app:layout_constraintStart_toEndOf="@+id/btnPagar"
+        app:layout_constraintTop_toBottomOf="@+id/cardCuenta"
+        app:srcCompat="@drawable/retiro" />
+
+    <TextView
+        android:id="@+id/RetirarT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Retirar"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnRetirar"
+        app:layout_constraintStart_toStartOf="@+id/btnRetirar"
+        app:layout_constraintTop_toBottomOf="@+id/btnRetirar" />
+
+    <ImageView
+        android:id="@+id/btnMasAcciones"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
+        android:rotation="90"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnRetirar"
+        app:layout_constraintTop_toBottomOf="@+id/cardCuenta"
+        app:srcCompat="@drawable/puntos" />
+
+    <TextView
+        android:id="@+id/MasAcciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="Mas\nacciones"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnMasAcciones"
+        app:layout_constraintStart_toStartOf="@+id/btnMasAcciones"
+        app:layout_constraintTop_toBottomOf="@+id/btnMasAcciones" />
+
+
+    <ImageView
+        android:id="@+id/TarjetaPromo"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/dividir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MasAcciones"
+        app:srcCompat="@drawable/tarjeta" />
+
+    <View
+        android:id="@+id/dividir"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="8dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/ivBottomTransfer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivBottomTransfer"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/TransferB"
+        app:layout_constraintEnd_toStartOf="@+id/ivBottomRetiro"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/transferencia" />
+
+    <TextView
+        android:id="@+id/TransferB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Transferir"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ivBottomTransfer"
+        app:layout_constraintStart_toStartOf="@+id/ivBottomTransfer" />
+
+    <ImageView
+        android:id="@+id/ivBottomRetiro"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/RetiroB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivBottomTransfer"
+        app:srcCompat="@drawable/retiro" />
+
+    <TextView
+        android:id="@+id/RetiroB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Retiro sin tarjeta"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ivBottomRetiro"
+        app:layout_constraintStart_toStartOf="@+id/ivBottomRetiro" />
+
+    <TextView
+        android:id="@+id/Promo"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:shadowColor="#40000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:text="¿Ya cuentas con tarjeta de credito? Tramitala ahora mismo"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/dividir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TarjetaPromo"
+        app:layout_constraintVertical_bias="0.775" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

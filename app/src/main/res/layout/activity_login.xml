@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="283dp"
+        android:layout_height="102dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.351"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.057"
+        app:srcCompat="@drawable/bancoppel" />
+
+    <ImageView
+        android:id="@+id/Menu"
+        android:layout_width="37dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.652"
+        app:layout_constraintStart_toEndOf="@+id/Logo"
+        app:layout_constraintTop_toTopOf="@+id/Logo"
+        app:srcCompat="@drawable/lineas" />
+
+    <TextView
+        android:id="@+id/Buenos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="!Buenos dias¡"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Logo" />
+
+    <TextView
+        android:id="@+id/Usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Osvaldo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Buenos" />
+
+    <ImageView
+        android:id="@+id/Huella"
+        android:layout_width="112dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Usuario"
+        app:srcCompat="@drawable/huella" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Contraseña"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Ingresa con tu contraseña"
+        android:textColor="#0052CC"
+        app:cornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Huella"
+        app:strokeColor="#0052CC"
+        app:strokeWidth="2dp" />
+
+    <ImageView
+        android:id="@+id/Publicidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Contraseña"
+        app:srcCompat="@drawable/banner" />
+
+    <View
+        android:id="@+id/Dividir"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#CCCCCC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Publicidad" />
+
+    <ImageView
+        android:id="@+id/Codi"
+        android:layout_width="104dp"
+        android:layout_height="49dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Dividir"
+        app:srcCompat="@drawable/codi" />
+
+    <TextView
+        android:id="@+id/Codii"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Codi®"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/Codi"
+        app:layout_constraintStart_toStartOf="@+id/Codi"
+        app:layout_constraintTop_toBottomOf="@+id/Codi" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="104dp"
+        android:layout_height="49dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Codi"
+        app:layout_constraintTop_toBottomOf="@+id/Dividir"
+        app:srcCompat="@drawable/retiro" />
+
+    <TextView
+        android:id="@+id/Retirar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Retiro sin tarjeta"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
